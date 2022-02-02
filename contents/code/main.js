@@ -1,16 +1,23 @@
 workspace.clientFullScreenSet.connect(function(client, fullscreen, user) {
-    var names = client.caption.split(' ');
-    var isFirefox = false;
-    for (var i = 0; i < names.length; i++) {
-        if (names === 'Firefox')
-            isFirefox = true;
-    }
-
-    if (isFirefox) {
-        if (fullscreen) {
-            print(client.opacity);
+    if (fullscreen) {
+        client.opacity = 1.0;
+    } else {
+        if (client.active) {
+            client.opacity = 0.9;
         } else {
-            print(client.opacity);
+            client.opacity = 0.8;
         }
     }
+    
+    client.activeChanged.connect(function() {
+        if (client.active) {
+            if (fullscreen) {
+                client.opacity = 1.0;
+            } else {
+                client.opacity = 0.9;
+            }
+        } else {
+            client.opacity = 0.8;
+        }
+    });
 });
