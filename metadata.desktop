@@ -1,11 +1,11 @@
 [Desktop Entry]
-Name=Firefox Fullscreen
-Comment=Disable opacity when Firefox is in fullscreen mode
+Name=Fullscreen Opacity
+Comment=Mange opacity of fullscreen windows
 Icon=preferences-system-windows
 
 X-KDE-PluginInfo-Author=afkdev8
 X-KDE-PluginInfo-Email=afkdev8@gmail.com
-X-KDE-PluginInfo-Name=firefox-fullscreen
+X-KDE-PluginInfo-Name=fullscreen-opacity
 X-KDE-PluginInfo-Version=1.0
 X-KDE-PluginInfo-License=GPL
 
